@@ -1,13 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* All range inputs */
+input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+/* WebKit range inputs */
+input[type='range']::-webkit-slider-runnable-track {
+    height: 1.5rem;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    border-radius: 2rem;
+    margin-top: -12px; /* Centers thumb on the track */
+    height: 3rem;
+    width: 3rem;
+}
+
+#rgb0::-webkit-slider-thumb {
+    background-color: #ffa3a3;
+}
+
+#rgb1::-webkit-slider-thumb {
+    background-color: #b1f2bb;
+}
+
+#rgb2::-webkit-slider-thumb {
+    background-color: #a8abff;
+}
+
+/* Firefox range inputs */
+input[type='range']::-moz-range-track {
+    height: 1.5rem;
+}
+
+input[type='range']::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 2rem; /*Removes default border-radius that FF applies*/
+    height: 3rem;
+    width: 3rem;
+}
+
+#rgb0::-moz-range-thumb {
+    background-color: #ffa3a3;
+}
+
+#rgb1::-moz-range-thumb {
+    background-color: #b1f2bb;
+}
+
+#rgb2::-moz-range-thumb {
+    background-color: #a8abff;
 }
